@@ -3,4 +3,6 @@
 <p>Number of pages: {{ book.num_pages }}</p>
 <p>Publish date: {{ book.date_published }}</p>
 <p>Author: {{ book.author }}</p>
-<p>Tags: {{ book.tags }}</p>
+{% for tags in book.tags.all  %}
+<p>tags: {{ tags }}<p>
+{% endfor %}
